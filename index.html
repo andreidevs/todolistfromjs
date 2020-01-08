@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+   
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <title>Список ваших задач</title>
+</head>
+<body>
+<div class="container">
+
+   <div class="todo_list">
+    <div class="header">
+      <h1>Название списка</h1>
+      <span>Выполнено: <span class="counterComplite"></span></span>
+      <span>Важных: <span class="counterImportant"></span></span>
+    </div>
+        
+       <div class="create_new_todo">
+
+        <div class="input-field col s6">
+            <i class="material-icons prefix">assignment</i>
+          <textarea id="autocomplete-input" type="text" data-length="120" maxlength="120" class="message autocomplete materialize-textarea"></textarea>
+          <label for="autocomplete-input">Описание вашей задачи</label>
+        </div>
+    
+
+           <button class="add waves-effect waves-light btn-small teal darken-2"><i class="material-icons right ">add_circle</i>Добавить</button>
+           <button class="edit waves-effect waves-light btn-small pink accent-2">Изменить</button>
+       </div>
+<!-- collection -->
+       <div class="wrapper">
+           <ul class="todo  collection">
+             
+           </ul>
+           <button class="deleteAll waves-effect waves-light btn-small red"><i class="material-icons right">delete_forever</i>Удалить все</button>
+       </div>
+
+   </div>
+
+</div>
+
+<menu class="menu">
+
+<li class="menu-item">
+<button type="button"  id ="btn-important" class="menu-btn btn-floating teal accent-3">
+<i class="material-icons center">priority_high</i>
+<!-- <span class="menu-text">Важно / Не важно</span> -->
+</button>
+
+</li>
+
+<li class="menu-item">
+<button type="button"  id ="btn-edit" class="menu-btn btn-floating purple darken-4">
+<i class="material-icons center">create</i>
+<!-- <span class="menu-text">Изменить</span> -->
+</button>
+</li>
+
+<li class="menu-item">
+<button type="button"  id ="btn-delete" class="menu-btn btn-floating red">
+<i class="material-icons center">cancel</i>
+<!-- <span class="menu-text">Удалить</span> -->
+</button>
+</li>
+
+</menu>
+
+
+<script src="js/script.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/visual.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body{
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 2vw;
+	hyphens: auto;
+}
+.edit{
+  display: none;
+}
+
+.header{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+
+}
+.header span{
+	padding-left: 1vw;
+	padding-top: 5vw;
+}
+
+.itemlist{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.p-text{
+font-size: 18px;
+}
+
+.itemlist span {
+	display: none;
+}
+.itemlist input{
+max-width: 20%;
+}
+
+.itemlist textarea{
+max-width: %;
+}
+
+
+.menu {
+position: absolute;
+display: flex;
+justify-content: space-between;
+margin: 0;
+z-index: 100;
+opacity: 0;
+-webkit-transform: translate(0, 15px) scale(.95);
+transform: translate(0, 15px) scale(.95);
+transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+pointer-events: none;
+
+}
+.menu-item {
+display: block;
+position: relative;
+margin: 0;
+padding: 0;
+white-space: nowrap;
+padding: 2%;
+}
+.menu-btn {
+width: 3.5vw;
+height: 3.5vw;
+}
+.menu-btn i{
+	width: 2vw;
+	height: 2vw;
+	padding-top: 8%;
+}
+.menu .menu {
+top: 4px;
+left: 99%;
+}
+.show-menu,
+.menu-item:hover > .menu {
+opacity: 1;
+-webkit-transform: translate(0, 0) scale(1);
+transform: translate(0, 0) scale(1);
+pointer-events: auto;
+}
+.menu-item:hover > .menu {
+-webkit-transition-delay: 100ms;
+transition-delay: 300ms;
+}
